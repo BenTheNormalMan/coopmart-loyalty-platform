@@ -1,0 +1,73 @@
+.public-header {
+  background-color: white;
+  border-bottom: 2px solid var(--coop-primary, #D31145);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+  padding: 16px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.coop-logo-img {
+  height: 96px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #E5E7EB;
+}
+
+.brand-subtitle {
+  color: var(--text-secondary, #4B5563);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-link {
+  color: var(--text-primary, #1F2937);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.header-link:hover {
+  color: var(--coop-primary, #D31145);
+}
+
+.btn-header {
+  border-radius: 20px !important;
+}
+
+@media (max-width: 640px) {
+  .brand-divider, .brand-subtitle {
+    display: none;
+  }
+}

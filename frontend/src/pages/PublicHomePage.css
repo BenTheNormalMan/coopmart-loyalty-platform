@@ -1,0 +1,650 @@
+.text-coop-red {
+  color: var(--coop-primary, #D31145);
+}
+
+/* HERO */
+.home-hero {
+  background-color: #E8F9FF;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+  letter-spacing: -1px;
+}
+
+.hero-desc {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.hero-image-placeholder {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-card {
+  width: 400px;
+  height: 250px;
+  background: linear-gradient(135deg, var(--coop-primary) 0%, #A00C32 100%);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(211, 17, 69, 0.2);
+  padding: 30px;
+  color: white;
+  position: relative;
+  transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+  transition: transform 0.3s ease;
+}
+
+.hero-card:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+.card-chip {
+  width: 50px;
+  height: 40px;
+  background: #FCD34D;
+  border-radius: 6px;
+  margin-bottom: 80px;
+}
+
+.card-logo {
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.card-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  opacity: 0.9;
+}
+
+/* SECTION COMMONS */
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+}
+
+/* OFFICIAL COOPMART BENEFITS SECTION */
+.coop-benefits-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.coop-benefits-supertitle {
+  color: #1553A1;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.coop-benefits-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1553A1;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.coop-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.coop-benefit-card {
+  background: #115cc9;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coop-benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(17, 92, 201, 0.3);
+}
+
+.coop-benefit-bg-logo {
+  position: absolute;
+  right: -5%;
+  bottom: -20px;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  font-size: 12rem;
+  color: rgba(255, 255, 255, 0.08);
+  letter-spacing: -8px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.coop-benefit-image-wrapper {
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.coop-benefit-leaf-shape {
+  width: 160px;
+  height: 160px;
+  background: #ff0055;
+  border-radius: 4px 60px 4px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  box-shadow: 0 10px 20px rgba(255, 0, 85, 0.3);
+}
+
+.coop-benefit-content {
+  flex: 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.coop-benefit-title {
+  color: white;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.coop-benefit-desc {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.coop-benefit-link {
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+  margin-top: auto;
+}
+
+.coop-benefit-link:hover {
+  opacity: 0.8;
+}
+
+/* Reusable Co.op Arrow Button */
+.coop-arrow-btn {
+  display: flex;
+  position: relative;
+  width: 36px;
+  height: 24px;
+}
+
+.circle-green {
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: #a3e635;
+  /* lime green */
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.circle-pink {
+  position: absolute;
+  left: 12px;
+  width: 24px;
+  height: 24px;
+  background: #ff0055;
+  /* bright pink */
+  border-radius: 50%;
+  z-index: 2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding-bottom: 2px;
+}
+
+/* OFFICIAL COOPMART TIER SECTION */
+.coop-tier-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* iMac Mockup */
+.coop-imac-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.imac-mockup {
+  background: #111;
+  border-radius: 20px 20px 4px 4px;
+  padding: 16px 16px 24px 16px;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3), inset 0 2px 5px rgba(255, 255, 255, 0.2);
+  width: 100%;
+  aspect-ratio: 16/10;
+  display: flex;
+  z-index: 2;
+  position: relative;
+  border: 1px solid #444;
+}
+
+.imac-mockup::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  background: #e5e5e5;
+  border-radius: 0 0 4px 4px;
+}
+
+.imac-screen {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0c4a6e 100%);
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  border: 2px solid #000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.play-button-overlay {
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.play-button-overlay:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.play-icon {
+  margin-left: 6px;
+  font-size: 1.5rem;
+}
+
+/* Stand & Base */
+.imac-stand {
+  background: linear-gradient(to bottom, #d4d4d4, #b0b0b0);
+  width: 140px;
+  height: 50px;
+  clip-path: polygon(15% 0, 85% 0, 100% 100%, 0% 100%);
+  z-index: 1;
+  position: relative;
+  margin-top: -10px;
+}
+
+.imac-base {
+  width: 220px;
+  height: 8px;
+  background: #a3a3a3;
+  border-radius: 4px 4px 0 0;
+  z-index: 1;
+}
+
+/* Content Column */
+.coop-tier-title {
+  color: #1553A1;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.coop-tier-desc {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+/* Overlapping Cards */
+.coop-cards-showcase {
+  position: relative;
+  height: 180px;
+  margin: 40px 0;
+  perspective: 1200px;
+}
+
+.coop-member-card {
+  width: 240px;
+  height: 140px;
+  position: absolute;
+  border-radius: 12px;
+  padding: 16px 20px;
+  color: white;
+  box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  user-select: none;
+  
+  /* 3D TILT */
+  transform-style: preserve-3d;
+  transform: rotateY(25deg) rotateX(5deg) scale(0.95);
+}
+
+.coop-card-label {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.coop-card-tier {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.coop-member-card.platinum {
+  left: 0;
+  z-index: 4;
+  background: linear-gradient(135deg, #a48139, #795d2c); /* Dark Bronze/Platinum */
+}
+
+.coop-member-card.gold {
+  left: 110px;
+  z-index: 3;
+  background: linear-gradient(135deg, #f7ba0b, #daa520); /* Yellow Gold */
+}
+
+.coop-member-card.silver {
+  left: 220px;
+  z-index: 2;
+  background: linear-gradient(135deg, #c7c8cc, #9ca3af); /* Silver Gray */
+  color: #1F2937;
+}
+
+.coop-member-card.bronze {
+  left: 330px;
+  z-index: 1;
+  background: linear-gradient(135deg, #d32029, #a81a21); /* Red / Default Member */
+}
+
+/* ---- Mobile: show only Platinum card, centered ---- */
+@media (max-width: 992px) {
+  .coop-cards-showcase {
+    position: relative;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: none;
+    margin: 32px 0;
+  }
+
+  /* Hide all non-platinum cards */
+  .coop-member-card.gold,
+  .coop-member-card.silver,
+  .coop-member-card.bronze {
+    display: none;
+  }
+
+  /* Reset platinum card to static centered */
+  .coop-member-card.platinum {
+    position: static;
+    transform: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 220px;
+  }
+}
+
+/* Pill UI Buttons */
+.coop-pill-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.coop-pill-btn {
+  display: flex;
+  align-items: center;
+  background: #1553A1;
+  border-radius: 100px;
+  padding: 6px 32px 6px 6px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  width: fit-content;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(0, 51, 153, 0.25);
+}
+
+.coop-pill-btn:hover {
+  transform: translateX(8px);
+  background: #0e3d81;
+  color: white;
+  box-shadow: 0 6px 20px rgba(0, 51, 153, 0.35);
+}
+
+.pill-thumb {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  margin-right: 20px;
+  border: 3px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* CTA */
+.home-cta {
+  background-color: var(--coop-primary);
+  color: white;
+  padding: 80px 0;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.cta-desc {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  margin-bottom: 32px;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coop-tier-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .coop-tier-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coop-cards-showcase {
+    transform-origin: center top;
+    transform: scale(0.85);
+  }
+
+  .tier-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tier-mechanism-box {
+    flex-direction: column;
+    padding: 30px;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .mechanism-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .coop-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coop-cards-showcase {
+    transform-origin: center top;
+    transform: scale(0.65) translateX(-15%);
+  }
+
+  .tier-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions>a {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   PUBLIC — ADDITIONAL MOBILE POLISH
+   ========================================== */
+@media (max-width: 768px) {
+  .home-hero {
+    padding: 48px 0;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-desc {
+    font-size: 1rem;
+  }
+  .cta-title {
+    font-size: 1.8rem;
+  }
+  .cta-desc {
+    font-size: 1rem;
+  }
+  .section-heading h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero {
+    padding: 36px 0;
+  }
+  .hero-title {
+    font-size: 1.7rem;
+    letter-spacing: -0.5px;
+  }
+  .container {
+    padding: 0 16px;
+  }
+}
