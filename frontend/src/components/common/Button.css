@@ -1,0 +1,84 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+}
+.btn-md {
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+}
+
+/* Variants */
+.btn-primary {
+  background: var(--coop-primary, #D31145);
+  color: white;
+}
+.btn-primary:hover:not(:disabled) {
+  background: #B30E3A;
+}
+
+.btn-secondary {
+  background: var(--coop-secondary, #005B9F);
+  color: white;
+}
+.btn-secondary:hover:not(:disabled) {
+  background: #00467A;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--coop-primary, #D31145);
+  color: var(--coop-primary, #D31145);
+}
+.btn-outline:hover:not(:disabled) {
+  background: rgba(211, 17, 69, 0.05);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-primary, #1F2937);
+}
+.btn-ghost:hover:not(:disabled) {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: currentColor;
+  animation: spin 0.8s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

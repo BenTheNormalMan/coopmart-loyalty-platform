@@ -1,0 +1,914 @@
+/* ==========================================
+   CUSTOMER PORTAL PAGE STYLES
+   ========================================== */
+
+/* ---- Page Header ---- */
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--gray-900);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.page-header p {
+  font-size: 14px;
+  color: var(--gray-500);
+}
+
+/* ---- Stats Grid ---- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* ---- Progress Bar ---- */
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-600);
+  margin-bottom: 8px;
+}
+
+.progress-pct {
+  font-weight: 700;
+  color: var(--warning);
+}
+
+.progress-bar-bg {
+  height: 10px;
+  background: var(--gray-100);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 0.6s ease;
+}
+
+.progress-hint {
+  font-size: 12px;
+  color: var(--gray-400);
+  margin-top: 8px;
+}
+
+/* ---- Expiry ---- */
+.expiry-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.expiry-points {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.expiry-date {
+  font-size: 12px;
+  color: var(--warning);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* ---- Content Grid ---- */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* ---- Profile header: name wraps cleanly ---- */
+.profile-name {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* ---- Rewards Page ---- */
+.points-summary-card {
+  margin-bottom: 20px;
+}
+
+.points-summary-inner {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.points-summary-block {
+  flex: 1;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+}
+
+.points-summary-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--gray-400);
+}
+
+.points-summary-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.points-summary-divider {
+  width: 1px;
+  height: 56px;
+  background: var(--gray-200);
+  flex-shrink: 0;
+}
+
+/* Category Filter */
+.category-filter {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 7px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1.5px solid var(--gray-200);
+  background: var(--white);
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.category-btn:hover,
+.category-btn-active {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+/* Rewards Grid */
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.reward-card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.reward-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.reward-img-placeholder {
+  background: linear-gradient(135deg, #f0f4ff, #e8f2fc);
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+}
+
+.reward-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.reward-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gray-800);
+  line-height: 1.3;
+}
+
+.reward-stock {
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+.reward-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--gray-100);
+}
+
+.reward-points {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--warning);
+}
+
+/* ---- Coupons Page ---- */
+.coupon-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.coupon-tab {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1.5px solid var(--gray-200);
+  background: var(--white);
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.coupon-tab-active {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.coupons-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.coupon-card {
+  display: flex;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  transition: var(--transition);
+}
+
+.coupon-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.coupon-expired {
+  opacity: 0.5;
+  filter: grayscale(0.5);
+}
+
+.coupon-left {
+  width: 90px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  padding: 20px 0;
+}
+
+.coupon-notch {
+  position: absolute;
+  left: -1px;
+  width: 14px;
+  height: 14px;
+  border-radius: 0 50% 50% 0;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  border-left: none;
+}
+.coupon-notch-top { top: -7px; }
+.coupon-notch-bottom { bottom: -7px; }
+
+.coupon-icon { font-size: 28px; }
+.coupon-category { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 0.5px; }
+
+.coupon-right {
+  flex: 1;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.coupon-id { font-size: 11px; color: var(--gray-400); font-weight: 600; font-family: monospace; }
+.coupon-title { font-size: 18px; font-weight: 800; color: var(--gray-900); }
+.coupon-desc { font-size: 13px; color: var(--gray-500); }
+.coupon-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+.coupon-expiry { font-size: 12px; color: var(--warning); font-weight: 600; }
+
+/* ---- Offers Page ---- */
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.offer-card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.offer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.offer-icon-wrap {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offer-icon { font-size: 36px; }
+
+.offer-body { padding: 16px; }
+.offer-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.offer-date { font-size: 11px; color: var(--gray-400); font-weight: 600; }
+.offer-title { font-size: 15px; font-weight: 700; color: var(--gray-900); line-height: 1.3; margin-bottom: 8px; }
+.offer-desc { font-size: 13px; color: var(--gray-500); line-height: 1.5; }
+
+/* ---- Tier Page ---- */
+.tier-status-card {
+  margin-bottom: 0;
+}
+
+.tier-status-inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+  align-items: center;
+  padding: 28px;
+}
+
+.tier-status-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gray-400);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.tier-progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  margin-bottom: 8px;
+}
+
+.tier-progress-pct {
+  color: var(--warning);
+  font-weight: 800;
+}
+
+.tier-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.tier-detail-card {
+  border-radius: var(--border-radius);
+  border: 2px solid;
+  padding: 24px 18px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.tier-detail-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.tier-detail-current {
+  box-shadow: var(--shadow-md);
+}
+
+.tier-current-badge {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.tier-detail-icon { font-size: 36px; margin-bottom: 6px; }
+.tier-detail-name { font-size: 20px; font-weight: 800; }
+.tier-detail-name-en { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--gray-400); font-weight: 600; margin-bottom: 12px; }
+
+.tier-spend-range {
+  font-size: 12px;
+  color: var(--gray-500);
+  padding: 8px;
+  background: rgba(0,0,0,0.04);
+  border-radius: 6px;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.tier-perks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.tier-perks-list li {
+  font-size: 12px;
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+
+/* ---- Profile Page ---- */
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+.profile-stat-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile-stat {
+  text-align: center;
+}
+
+.profile-stat-val {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--gray-900);
+}
+
+.profile-stat-label {
+  font-size: 12px;
+  color: var(--gray-400);
+  font-weight: 500;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 14px;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-row span:first-child {
+  color: var(--gray-500);
+}
+
+/* ---- Page Loading / Error States ---- */
+.page-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+  font-size: 14px;
+  color: var(--gray-400);
+  font-weight: 500;
+}
+
+.page-error {
+  background: var(--danger-light);
+  color: var(--danger);
+  border: 1px solid #fca5a5;
+  border-radius: var(--border-radius-sm);
+  padding: 16px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* ---- Profile Page (new layout) ---- */
+.profile-avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.profile-email {
+  font-size: 13px;
+  color: var(--gray-500);
+  margin-top: 2px;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.profile-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 14px;
+  gap: 12px;
+}
+
+.profile-detail-row:last-child {
+  border-bottom: none;
+}
+
+.profile-detail-row dt {
+  color: var(--gray-500);
+  font-weight: 500;
+  flex-shrink: 0;
+  min-width: 90px;
+}
+
+.profile-detail-row dd {
+  color: var(--gray-800);
+  font-weight: 500;
+  text-align: right;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+/* ---- Tier Ladder ---- */
+.tier-badge-large {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 8px 20px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.tier-ladder {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.tier-step {
+  padding: 16px;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--gray-200);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.tier-step-active {
+  border-color: var(--primary);
+  background: #e8f2fc;
+}
+
+.tier-step-passed {
+  border-color: var(--success);
+  background: var(--success-light);
+}
+
+.tier-step-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gray-800);
+}
+
+/* ---- Coupon Grid Cards (real API version) ---- */
+.coupon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.coupon-card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  border: 1.5px solid var(--gray-200);
+  box-shadow: var(--shadow-sm);
+  padding: 20px;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.coupon-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.coupon-card-expired {
+  opacity: 0.65;
+  filter: grayscale(0.3);
+}
+
+.coupon-campaign {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--gray-400);
+}
+
+.coupon-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.coupon-code-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.coupon-code {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  background: #e8f2fc;
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  flex: 1;
+}
+
+.coupon-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--gray-400);
+  flex-wrap: wrap;
+}
+
+/* ---- Campaign Cards ---- */
+.campaign-card {
+  transition: var(--transition);
+}
+
+.campaign-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.campaign-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.campaign-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 6px;
+}
+
+.campaign-meta-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.campaign-reward {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  gap: 2px;
+}
+
+.campaign-desc {
+  font-size: 13px;
+  color: var(--gray-500);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.campaign-details-row {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--gray-500);
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.campaign-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.campaign-claimed-box {
+  background: var(--success-light);
+  border: 1px solid #86efac;
+  border-radius: var(--border-radius-sm);
+  padding: 12px 16px;
+  margin-top: 8px;
+}
+
+.campaign-action-error {
+  background: var(--danger-light);
+  color: var(--danger);
+  border: 1px solid #fca5a5;
+  border-radius: var(--border-radius-sm);
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* ---- Helper: form-grid-2 for admin pages ---- */
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* ==========================================
+   RESPONSIVE — CUSTOMER PAGES TABLET (≤ 1024px)
+   ========================================== */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tier-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tier-ladder {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .rewards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .offers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================
+   RESPONSIVE — CUSTOMER PAGES MOBILE (≤ 768px)
+   ========================================== */
+@media (max-width: 768px) {
+  /* Grids */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  .tier-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tier-ladder {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .rewards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tier status inner: stack vertically */
+  .tier-status-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* Profile detail rows */
+  .profile-detail-row {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .profile-detail-row dt {
+    width: 100%;
+  }
+  .profile-detail-row dd {
+    text-align: left;
+    width: 100%;
+  }
+
+  /* Profile avatar row */
+  .profile-avatar-row {
+    flex-wrap: wrap;
+  }
+
+  /* Points summary: stack */
+  .points-summary-inner {
+    flex-direction: column;
+  }
+  .points-summary-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  /* Coupon card: stack vertically */
+  .coupon-card {
+    flex-direction: column;
+  }
+  .coupon-left {
+    width: 100%;
+    padding: 16px 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px;
+    padding-left: 16px;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE — CUSTOMER PAGES SMALL (≤ 480px)
+   ========================================== */
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .tier-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .tier-ladder {
+    grid-template-columns: 1fr 1fr;
+  }
+  .rewards-grid {
+    grid-template-columns: 1fr;
+  }
+}
