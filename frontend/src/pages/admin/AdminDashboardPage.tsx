@@ -23,14 +23,15 @@ export default function AdminDashboardPage() {
       return;
     }
     Promise.all([
-      adminApi.getCampaigns({ limit: 5 }).catch(() => mockAdminCampaigns),
-      adminApi.getStats().catch(() => mockAdminStats),
-      adminApi.getAuditLogs({ limit: 5 }).catch(() => mockAdminAuditLogs)
+      adminApi.getCampaigns({ limit: 5 }),
+      adminApi.getStats(),
+      adminApi.getAuditLogs({ limit: 5 })
     ]).then(([c, s, l]) => {
       setCampaigns(c);
       setStats(s);
       setLogs(l);
-    }).finally(() => setLoading(false));
+    }).catch(() => { })
+      .finally(() => setLoading(false));
   }, []);
 
   return (

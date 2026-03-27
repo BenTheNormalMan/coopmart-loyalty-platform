@@ -1,10 +1,14 @@
 import { mockCustomerCoupons } from '../../mocks/customer';
-import { mockAdminCoupons } from '../../mocks/admin';
 import { isDemoMode } from '../../utils/demo';
 
 export default function CouponsManagementPage() {
   const coupons = isDemoMode() ? mockCustomerCoupons : [];
-  const allMockCoupons = [...coupons, ...mockAdminCoupons];
+  const allMockCoupons = [
+    ...coupons,
+    { id: 'adm-coup-1', couponCode: 'PLAT-VIP-XX1', campaignId: 'camp-p1', campaignName: 'Ưu đãi Bạch Kim', couponTitle: 'VOUCHER VIP', claimedAt: new Date(Date.now() - 86400000 * 5).toISOString(), campaignStatus: 'ACTIVE' as const, campaignEndAt: new Date(Date.now() + 86400000 * 20).toISOString(), isCampaignExpired: false },
+    { id: 'adm-coup-2', couponCode: 'COOP30Y-X7B9K', campaignId: 'camp-2', campaignName: 'Sinh nhật Co.opmart 30 Năm', couponTitle: 'SINH NHẬT VÀNG', claimedAt: new Date(Date.now() - 86400000 * 2).toISOString(), campaignStatus: 'ACTIVE' as const, campaignEndAt: new Date(Date.now() + 86400000 * 14).toISOString(), isCampaignExpired: false },
+    { id: 'adm-coup-3', couponCode: 'WELCOME-BRONZE', campaignId: 'camp-0', campaignName: 'Quà tặng thành viên mới', couponTitle: 'WELCOME 20K', claimedAt: new Date(Date.now() - 86400000 * 15).toISOString(), campaignStatus: 'ENDED' as const, campaignEndAt: new Date(Date.now() - 86400000).toISOString(), isCampaignExpired: true },
+  ];
 
   return (
     <div>
